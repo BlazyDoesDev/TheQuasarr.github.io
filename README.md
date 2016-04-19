@@ -1,1 +1,1 @@
-# Blazarr.github.io
+# TheQuasarr.github.io
