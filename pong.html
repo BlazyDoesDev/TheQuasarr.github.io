@@ -1,13 +1,16 @@
-<canvas id="gc" width="720" height="720"></canvas>
+<canvas id="gc" width="1280" height="720"></canvas>
+<body>
+	<button type="button" onclick="reset()">Reset</button>
+</body>
 <script>
 p1y=p2y=40;
-pt=100;
-ph=1000;
+pt=15;
+ph=150;
 bx=by=50;
-bd=6;
+bd=12;
 xv=yv=10;
 score1=score2=0;
-ais=5;
+ais=8;
 
 window.onload=function() {
 	c=document.getElementById('gc');
@@ -22,6 +25,7 @@ function reset() {
 	by=c.height/2;
 	xv=-xv;
 	yv=3;
+	yv=-yv
 }
 
 function update() {
@@ -68,7 +72,9 @@ function update() {
 	cc.fillRect(0, p1y, pt, ph);
 	cc.fillRect(c.width-pt, p2y, pt, ph);
 	cc.fillRect(bx-bd/2, by-bd/2, bd, bd);
-	cc.fillText(score1, 1000, 1000)
-	cc.fillText(score2, c.width-1000, 1000)
+	
+	cc.font = 'bold 40pt Trebuchet';
+	cc.fillText(score1, 100, 100, 2000)
+	cc.fillText(score2, c.width-100, 100, 2000)
 }
 </script>
